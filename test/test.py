@@ -50,6 +50,16 @@ class Mis_test(unittest.TestCase):
         a=0
         self.assertIsNotNone(a,"Se espea que a no sea nulo")
 
+    def test_es(self):
+        a=5
+        b=5
+        self.assertIs(a,b,"No son iguales")
+
+    def test_no_es(self):
+        a=5
+        b=5.00
+        self.assertIsNot(a,b,"Son iguales")
+
 
     def tearDown(self):
         print('Borrando datos.......')
