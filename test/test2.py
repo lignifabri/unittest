@@ -2,6 +2,7 @@ import unittest
 
 class Otros_test(unittest.TestCase):
 
+    @unittest.skip("no se ejecuta")
     def test_otra_suma(self):
         self.assertEqual(2+2,4)
 
@@ -9,5 +10,5 @@ class Otros_test(unittest.TestCase):
         self.assertEqual(2-2,0)
 
 
-# if __name__=='__ain__':
+# if __name__=='__main__':
     # unittest.main()
