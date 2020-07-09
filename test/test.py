@@ -42,6 +42,14 @@ class Mis_test(unittest.TestCase):
         a=5
         self.assertFalse(a==2+4,"Esperaba un false")
 
+    def test_es_nulo(self):
+        a=None
+        self.assertIsNone(a,"Se espera que a sea nulo")
+
+    def test_no_es_nulo(self):
+        a=0
+        self.assertIsNotNone(a,"Se espea que a no sea nulo")
+
 
     def tearDown(self):
         print('Borrando datos.......')
