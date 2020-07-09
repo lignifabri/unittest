@@ -7,6 +7,11 @@ class Mis_test(unittest.TestCase):
     term_dos=0
     correr=True
 
+    @classmethod
+    def setUpClass(cls):
+        print("Preparando ambiente/base de datos/login....")
+        print("Ambiente preparado")
+
     def setUp(self):
         self.term_uno = 2
         self.term_dos = 2
@@ -92,6 +97,12 @@ class Mis_test(unittest.TestCase):
         a=3
         b=3
         self.assertLessEqual(a,b,"A tiene que ser menor o igual a B")
+
+    @classmethod
+    def tearDownClass(cls):
+        print("Eliminando ambiente/base de datos/logout....")
+        print("Ambiente eliminado")
+
 
 
     def tearDown(self):
