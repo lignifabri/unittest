@@ -22,5 +22,8 @@ class Mis_test(unittest.TestCase):
         self.assertTrue(self.term_uno-self.term_dos==0)
         self.assertTrue(self.correr)
 
+    def tearDown(self):
+        print('Borrando datos.......')
+
 if __name__=='__main__':
     unittest.main()
