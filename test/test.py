@@ -70,6 +70,26 @@ class Mis_test(unittest.TestCase):
         b="Hola Mundo"
         self.assertNotIn(a,b,"El texto está incluido")
 
+    def test_es_mayor(self):
+        a=7
+        b=5
+        self.assertGreater(a,b,"A tiene que ser mayor que B")
+
+    def test_es_mayor_igual(self):
+        a=5
+        b=5
+        self.assertGreaterEqual(a,b,"A debe ser mayor o igual a B")
+
+    def test_es_menor(self):
+        a=3
+        b=5
+        self.assertLess(a,b,"A tiene que ser menor a B")
+
+    def test_es_menot_igual(self):
+        a=3
+        b=3
+        self.assertLessEqual(a,b,"A tiene que ser menor o igual a B")
+
 
     def tearDown(self):
         print('Borrando datos.......')
