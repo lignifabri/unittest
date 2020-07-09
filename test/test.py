@@ -25,15 +25,31 @@ class Mis_test(unittest.TestCase):
     def test_verificar_iguales(self):
         a=5
         b=4+1
+        #verufica a==b
         self.assertEqual(a,b)
 
     def test_verificar_no_iguales(self):
         a=19
         b=5*3
+        #verifica a!=b
         self.assertNotEqual(a,b,"a tiene que ser diferente de b")
+
+    def test_validar_si_verdadero(self):
+        a=2
+        self.assertTrue(a==2,"Esperaba un true")
+
+    def test_validar_si_falso(self):
+        a=5
+        self.assertFalse(a==2+4,"Esperaba un false")
+
 
     def tearDown(self):
         print('Borrando datos.......')
 
 if __name__=='__main__':
     unittest.main()
+
+
+
+
+
