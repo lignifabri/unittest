@@ -1,6 +1,5 @@
 import unittest
-
-
+import platform
 
 class Mis_test(unittest.TestCase):
 
@@ -14,20 +13,24 @@ class Mis_test(unittest.TestCase):
         if self.term_uno * self.term_dos == 2000:
             self.correr = False
 
+    @unittest.skip("No se ejecuta porque necesita cambios")
     def test_suma(self):
         self.assertEqual(self.term_uno+self.term_dos,4)
         self.assertTrue(self.correr)
 
+    @unittest.skip("No necesita verificación por cambio de funcionalidad")
     def test_resta(self):
         self.assertTrue(self.term_uno-self.term_dos==0)
         self.assertTrue(self.correr)
 
+    @unittest.skipIf(platform.system()=='Linux',"no se ejecuta en Linux")
     def test_verificar_iguales(self):
         a=5
         b=4+1
         #verufica a==b
         self.assertEqual(a,b)
 
+    @unittest.skipUnless(platform.system()=='Linux',"Sólo se ejecuta en Linux")
     def test_verificar_no_iguales(self):
         a=19
         b=5*3
