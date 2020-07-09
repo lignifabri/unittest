@@ -60,6 +60,16 @@ class Mis_test(unittest.TestCase):
         b=5.00
         self.assertIsNot(a,b,"Son iguales")
 
+    def test_texto_en(self):
+        a="Hola"
+        b="Hola Mundo"
+        self.assertIn(a,b,"No está dentro")
+
+    def test_texto_no_en(self):
+        a="hola"
+        b="Hola Mundo"
+        self.assertNotIn(a,b,"El texto está incluido")
+
 
     def tearDown(self):
         print('Borrando datos.......')
